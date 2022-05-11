@@ -1,0 +1,79 @@
+{
+    // Required
+    "manifest_version": 3,
+    "name": "My Extension",
+    "version": "versionString",
+
+    // Recommended
+    "action": { 1 },
+    "default_locale": "en",
+    "description": "A plain text description",
+    "icons": { 1 },
+
+    // Optional
+    "author": 1,
+    "automation": 1,
+    "background": {
+        // Required
+        "service_worker": "background.js",
+        // Optional
+        "type": 1
+    },
+    "chrome_settings_overrides": { 1 },
+    "chrome_url_overrides": { 1 },
+    "commands": { 1 },
+    "content_capabilities": 1,
+    "content_scripts": [{ 1 }],
+    "content_security_policy": { 1 },
+    "converted_from_user_script": 1,
+    "cross_origin_embedder_policy": { "value": "require-corp" },
+    "cross_origin_opener_policy": { "value": "same-origin" },
+    "current_locale": 1,
+    "declarative_net_request": 1,
+    "devtools_page": "devtools.html",
+    "differential_fingerprint": 1,
+    "event_rules": [{ 1 }],
+    "externally_connectable": {
+        "matches": ["*://*.example.com/*"]
+    },
+    "file_browser_handlers": [1],
+    "file_system_provider_capabilities": {
+        "configurable": true,
+        "multiple_mounts": true,
+        "source": "network"
+    },
+    "homepage_url": "https://path/to/homepage",
+    "host_permissions": [1],
+    "import": [{ "id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" }],
+    "incognito": "spanning, split, or not_allowed",
+    "input_components": 1,
+    "key": "publicKey",
+    "minimum_chrome_version": "versionString",
+    "nacl_modules": [1],
+    "natively_connectable": 1,
+    "oauth2": 1,
+    "offline_enabled": true,
+    "omnibox": {
+        "keyword": "aString"
+    },
+    "optional_host_permissions": ["1"],
+    "optional_permissions": ["tabs"],
+    "options_page": "options.html",
+    "options_ui": {
+        "page": "options.html"
+    },
+    "permissions": ["tabs"],
+    "platforms": 1,
+    "replacement_web_app": 1,
+    "requirements": { 1 },
+    "sandbox": [1],
+    "short_name": "Short Name",
+    "storage": {
+        "managed_schema": "schema.json"
+    },
+    "system_indicator": 1,
+    "tts_engine": { 1 },
+    "update_url": "https://path/to/updateInfo.xml",
+    "version_name": "aString",
+    "web_accessible_resources": [1]
+}

@@ -1,0 +1,65 @@
+{
+    "name": "MY POWER APP",
+    "description": "Build an Extension!",
+    "author": "SaidAbbos Khudoykulov",
+    "version": "1.0",
+    "action": {
+        "default_title": "POWER APP",
+        "default_popup": "popup/popup.html",
+        "default_icon": {
+            "16": "images/icon.png",
+            "32": "images/icon.png",
+            "48": "images/icon.png",
+            "128": "images/icon.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "commands": {
+        "_execute_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+F",
+                "mac": "MacCtrl+Shift+F"
+            },
+            "description": "Opens hello.html"
+        }
+    },
+    "manifest_version": 3,
+    "options_page": "options/options.html",
+    "options_ui": {
+        "page": "options/options.html",
+        "open_in_tab": true
+    },
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "css": ["content.css"],
+        "js": ["content.js"],
+        "all_frames": true
+    }],
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting",
+        "cookies",
+        "browsingData",
+        "clipboardRead",
+        "clipboardWrite",
+        "history",
+        "identity",
+        "downloads",
+        "proxy",
+        "sessions",
+        "tabs",
+        "tts",
+        "search",
+        "notifications"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
